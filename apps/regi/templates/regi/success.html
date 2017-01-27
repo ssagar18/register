@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>login</title>
+  </head>
+  <body>{% for user in data %}
+    <h2>Success! Welcome, {{ user.first_name }}</h2>
+    <p>Successfully registered</p>
+    <form action="/log_out" method="post">
+       {% csrf_token %}
+      <input type="submit" value="Log Out">
+    </form>
+    {% endfor %}
+
+  </body>
+</html>
